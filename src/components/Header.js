@@ -9,7 +9,7 @@ import {
   Container,
   Divider
 } from 'semantic-ui-react'
-import { any } from 'prop-types'
+import { any, func } from 'prop-types'
 import background from '../header-min.jpg'
 export default class PageHeader extends React.Component {
   state = {
@@ -18,7 +18,8 @@ export default class PageHeader extends React.Component {
   }
   
   static propTypes = {
-    logo: any
+    logo: any,
+    toggle: func
   }
 
   handleClick = () => fetch("/", {
@@ -27,7 +28,7 @@ export default class PageHeader extends React.Component {
     body:  Object.keys(this.state)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(this.state[key]))
       .join("&")
-  })
+  }).then(this.props.toggle).then(this.setState({ email: '' }))
   
   handleChange = ( _, { value } ) => this.setState({ email: value })
 
@@ -50,6 +51,7 @@ export default class PageHeader extends React.Component {
             id="about"
             name="email"
             type="email"
+            value={this.state.email}
             fluid
             action={
               <Button animated color="blue" inverted type="submits" onClick={this.handleClick}>
