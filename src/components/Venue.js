@@ -1,5 +1,5 @@
 import React from 'react'
-import { Segment, Header, Container, Grid, Card, Image } from 'semantic-ui-react'
+import { Segment, Header, Container, Grid, Image } from 'semantic-ui-react'
 import aia from '../aia-min.jpg'
 import venue from '../venue-min.jpeg'
 

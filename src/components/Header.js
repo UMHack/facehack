@@ -12,9 +12,24 @@ import {
 import { any } from 'prop-types'
 import background from '../header-min.jpg'
 export default class PageHeader extends React.Component {
+  state = {
+    'form-name': 'subscribe',
+    email: ''
+  }
+  
   static propTypes = {
     logo: any
   }
+
+  handleClick = () => fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body:  Object.keys(this.state)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(this.state[key]))
+      .join("&")
+  })
+  
+  handleChange = ( _, { value } ) => this.setState({ email: value })
 
   render() {
     return (
@@ -33,9 +48,10 @@ export default class PageHeader extends React.Component {
           </Header>
           <Input
             id="about"
+            name="email"
             fluid
             action={
-              <Button animated color="blue" inverted>
+              <Button animated color="blue" inverted type="submits" onClick={this.handleClick}>
                 <Button.Content visible>Subscribe</Button.Content>
                 <Button.Content hidden>
                   <Icon name="feed" />
@@ -46,6 +62,7 @@ export default class PageHeader extends React.Component {
             iconPosition="left"
             placeholder="Your email address..."
             inverted
+            onChange={this.handleChange}
           />
         </Container>
       </Segment>
