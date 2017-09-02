@@ -49,6 +49,7 @@ export default class PageHeader extends React.Component {
           <Input
             id="about"
             name="email"
+            type="email"
             fluid
             action={
               <Button animated color="blue" inverted type="submits" onClick={this.handleClick}>
