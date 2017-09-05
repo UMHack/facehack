@@ -39,6 +39,7 @@ export default class PageHeader extends React.Component {
           <Divider hidden />
           <Image src={this.props.logo} size="medium" alt="Logo of UMHack" centered />
           <Header as="h1" inverted>
+          Open for registration on September 12th 
             <Header.Subheader>
               <strong>Department of Artificial Intelligence <br/>Faculty of Computer Science & IT <br/>University of Malaya<br/>17th – 19th November 2017</strong>
             </Header.Subheader>
