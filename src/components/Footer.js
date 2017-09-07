@@ -1,8 +1,8 @@
 import React from 'react'
 import { Segment, Image } from 'semantic-ui-react'
 import { any } from 'prop-types'
-import um from '../um-min.png'
-import fsktm from '../fsktm-min.jpg'
+import um from '../image/um-min.png'
+import fsktm from '../image/fsktm-min.jpg'
 
 export default class Footer extends React.Component {
   static propTypes = {

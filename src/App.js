@@ -8,7 +8,7 @@ import Venue from './components/Venue'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import Subscribe from './components/Subscribe'
-import logo from './facehack_logo-min.png'
+import logo from './image/facehack_logo-min.png'
 
 class App extends Component {
   state = { subscribe: false }

@@ -55,7 +55,7 @@ export default class FAQ extends React.Component {
             <Header.Subheader>
               E-mail us at
               {' '}
-              <a href="mailto:facehack@gmail.com">facehack@gmail.com</a>
+              <a href="mailto:facehack.um@gmail.com">facehack.um@gmail.com</a>
               {' '}
               to get more info.
             </Header.Subheader>
