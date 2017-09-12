@@ -29,12 +29,12 @@ export default class Venue extends React.Component {
             200
           )
         ),
-      1000
+      200
     )
 
   render() {
     return (
-      <Visibility onTopVisible={this.handleVisible}>
+      <Visibility onBottomVisible={this.handleVisible}>
         <Segment
           vertical
           inverted
@@ -94,7 +94,7 @@ export default class Venue extends React.Component {
                       service (Blue Route, Medan MARA – Bukit Bintang) and stop
                       at Menara AIA.
                     </p>
-                    <p id="faq">
+                    <p>
                       And since you are more than likely a tech-savvy person, if
                       all else fails, you can always count on Google Maps.
                     </p>

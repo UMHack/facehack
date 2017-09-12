@@ -66,7 +66,6 @@ export default class PageHeader extends React.Component {
   render() {
     return (
       <Segment
-        id="header"
         textAlign="center"
         vertical
         style={{
@@ -122,7 +121,6 @@ export default class PageHeader extends React.Component {
                     Subscribe for latest updates!
                   </Header>
                   <Input
-                    id="about"
                     name="email"
                     type="email"
                     value={this.state.email}

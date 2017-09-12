@@ -28,12 +28,12 @@ export default class About extends React.Component {
             200
           )
         ),
-      1000
+      200
     )
 
   render() {
     return (
-      <Visibility onTopVisible={this.handleVisible}>
+      <Visibility onBottomVisible={this.handleVisible}>
         <Segment
           inverted
           vertical
@@ -88,7 +88,7 @@ export default class About extends React.Component {
                   animation="fade down"
                   duration="1000"
                 >
-                  <Image id="venue" centered size="medium" src={text} />
+                  <Image centered size="medium" src={text} />
                 </Transition>
               </Grid.Column>
             </Grid>
