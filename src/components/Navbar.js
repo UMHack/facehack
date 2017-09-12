@@ -4,7 +4,13 @@ import { Menu, Container } from 'semantic-ui-react'
 export default class Navbar extends React.Component {
   render() {
     return (
-      <Menu secondary pointing fixed="top" style={{background: 'white'}}>
+      <Menu
+        inverted
+        secondary
+        pointing
+        fixed="top"
+        style={{ background: 'black' }}
+      >
         <Container textAlign="center">
           <Menu.Item name="Home" href="#header" />
           <Menu.Item name="About" href="#about" />

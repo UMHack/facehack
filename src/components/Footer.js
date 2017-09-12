@@ -11,7 +11,7 @@ export default class Footer extends React.Component {
 
   render() {
     return (
-      <Segment basic attached textAlign="right">
+      <Segment vertical textAlign="right">
           <Image
             src={this.props.logo}
             size="tiny"

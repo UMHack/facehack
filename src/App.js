@@ -18,13 +18,13 @@ class App extends Component {
   render() {
     return (
       <Container fluid>
-          <Navbar/>
-          <Header logo={logo} toggle={this.toggle}/>
-          <About />
-          <Venue />
-          <FAQ />
-          <Footer logo={logo}/>
-          <Subscribe show={this.state.subscribe} toggle={this.toggle}/>
+        <Navbar />
+        <Header logo={logo} toggle={this.toggle} />
+        <About />
+        <Venue />
+        <FAQ />
+        <Footer logo={logo} />
+        <Subscribe show={this.state.subscribe} toggle={this.toggle} />
       </Container>
     )
   }
