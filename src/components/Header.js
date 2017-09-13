@@ -11,6 +11,8 @@ import {
   Grid,
   Transition
 } from 'semantic-ui-react'
+import Particles from 'react-particles-js'
+import params from './particlesjs-config.json'
 import { any, func } from 'prop-types'
 import background from '../image/header-min.jpg'
 
@@ -21,7 +23,8 @@ export default class PageHeader extends React.Component {
     visible: {
       logo: false,
       details: false
-    }
+    },
+    disable: true
   }
 
   static propTypes = {
@@ -44,7 +47,10 @@ export default class PageHeader extends React.Component {
       500
     )
   }
-
+  validateEmail = email => {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(email)
+  }
   handleClick = () =>
     fetch('/', {
       method: 'POST',
@@ -57,9 +63,10 @@ export default class PageHeader extends React.Component {
         .join('&')
     })
       .then(this.props.toggle)
-      .then(this.setState({ email: '' }))
+      .then(this.setState({ email: '', disable: true }))
 
-  handleChange = (_, { value }) => this.setState({ email: value })
+  handleChange = (_, { value }) =>
+    this.setState({ email: value, disable: !this.validateEmail(value) })
 
   handleOnScreen = (e, e_) => console.log(e, e_)
 
@@ -68,14 +75,19 @@ export default class PageHeader extends React.Component {
       <Segment
         textAlign="center"
         vertical
-        style={{
-          backgroundImage: `url(${background})`,
-          backgroundSize: 'cover'
-        }}
+        style={{ background: `url(${background})`, backgroundSize: 'cover' }}
       >
+        <Particles
+          params={params}
+          style={{
+            position: 'absolute',
+            left: 0
+          }}
+        />
         <Container>
           <Grid
             container
+            stackable
             columns={2}
             verticalAlign="middle"
             style={{ padding: '3em 0', minHeight: '100vh' }}
@@ -86,13 +98,18 @@ export default class PageHeader extends React.Component {
                 animation="fade right"
                 duration="1000"
               >
-                <Image
-                  src={this.props.logo}
-                  size="medium"
-                  alt="Logo of UMHack"
-                  centered
-                  verticalAlign="middle"
-                />
+                <div>
+                  <Image
+                    src={this.props.logo}
+                    size="medium"
+                    alt="Logo of UMHack"
+                    centered
+                    verticalAlign="middle"
+                  />
+                  <Header inverted size="large" style={{ fontWeight: 100 }}>
+                    17TH - 19TH NOVEMBER 2017
+                  </Header>
+                </div>
               </Transition>
             </Grid.Column>
             <Grid.Column>
@@ -102,9 +119,20 @@ export default class PageHeader extends React.Component {
                 duration="1000"
               >
                 <div>
-                  <Header as="h2" inverted>
-                    Open for registration on September 12th
-                  </Header>
+                  <Button
+                    animated
+                    color="green"
+                    inverted
+                    href="http://face2017.peatix.com"
+                    target="_blank"
+                    size="big"
+                    style={{ margin: '1em 0' }}
+                  >
+                    <Button.Content visible>Register Now</Button.Content>
+                    <Button.Content hidden>
+                      <Icon name="id card outline" />
+                    </Button.Content>
+                  </Button>
                   <Divider horizontal inverted>
                     Organised by
                   </Divider>
@@ -112,7 +140,6 @@ export default class PageHeader extends React.Component {
                     Department of Artificial Intelligence<br />
                     Faculty of Computer Science & IT<br />
                     University of Malaya<br />
-                    17th – 19th November 2017
                   </p>
                   <Divider horizontal inverted>
                     Newsletter
@@ -127,6 +154,7 @@ export default class PageHeader extends React.Component {
                     fluid
                     action={
                       <Button
+                        disabled={this.state.disable}
                         animated
                         color="blue"
                         inverted

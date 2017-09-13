@@ -1,5 +1,12 @@
 import React from 'react'
-import { Segment, Header, Container, Grid } from 'semantic-ui-react'
+import {
+  Segment,
+  Header,
+  Container,
+  Grid,
+  Button,
+  Icon
+} from 'semantic-ui-react'
 
 export default class FAQ extends React.Component {
   render() {
@@ -57,7 +64,23 @@ export default class FAQ extends React.Component {
               </Grid.Column>
             </Grid.Row>
           </Grid>
-          <Header size="tiny" textAlign="center">
+        </Container>
+        <Container textAlign="center">
+          <Button
+            animated
+            color="green"
+            href="http://face2017.peatix.com"
+            target="_blank"
+            size="big"
+          >
+            <Button.Content visible>
+              I'm in! Take me to registration
+            </Button.Content>
+            <Button.Content hidden>
+              <Icon name="arrow right" />
+            </Button.Content>
+          </Button>
+          <Header size="tiny">
             Did we miss any questions?
             <Header.Subheader>
               E-mail us at{' '}
