@@ -29,7 +29,7 @@ class App extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <div>
         <Navbar Link={Link} />
         <Element name="header" className="element">
           <Header logo={logo} toggle={this.toggle} />
@@ -45,7 +45,7 @@ class App extends Component {
         </Element>
         <Footer logo={logo} />
         <Subscribe show={this.state.subscribe} toggle={this.toggle} />
-      </Container>
+      </div>
     )
   }
 }
