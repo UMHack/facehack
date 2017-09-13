@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Container } from 'semantic-ui-react'
 import { Link, Element, Events, scrollSpy } from 'react-scroll'
 import Navbar from './components/Navbar'
 import Header from './components/Header'
