@@ -60,10 +60,11 @@ export default class Venue extends React.Component {
                   <Segment color="red">
                     <Image shape="rounded" src={aia} />
                     <Header>
-                      Menara AIA
+                      Level 39A & Penthouse,
                       <Header.Subheader>
-                        99 Jalan Ampang,<br />
-                        50450 Kuala Lumpur,<br />
+                        Menara AIA Capsquare,<br />
+                        No. 10, Jalan Munshi Abdullah,<br />
+                        50100 Kuala Lumpur,<br />
                         Wilayah Persekutuan Kuala Lumpur,<br />
                         Malaysia.
                       </Header.Subheader>
