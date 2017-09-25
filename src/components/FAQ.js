@@ -58,7 +58,7 @@ export default class FAQ extends React.Component {
                 </Header>
                 <p>
                   It will be a 48-hour competitive hackathon, starting at 7.00PM
-                  on Friday, 17th of November, 2017, and ending at 4.00PM on
+                  on Friday, 17th of November, 2017, and ending at 7.00PM on
                   Sunday, 19th of November, 2017.
                 </p>
               </Grid.Column>
