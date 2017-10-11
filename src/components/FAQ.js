@@ -72,9 +72,10 @@ export default class FAQ extends React.Component {
             href="http://face2017.peatix.com"
             target="_blank"
             size="big"
+            disabled
           >
             <Button.Content visible>
-              I'm in! Take me to registration
+              Registration closed. Stay tune for more info!
             </Button.Content>
             <Button.Content hidden>
               <Icon name="arrow right" />

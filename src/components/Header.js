@@ -121,28 +121,14 @@ export default class PageHeader extends React.Component {
                 <div>
                   <Button
                     animated
-                    color="green"
-                    inverted
-                    href="http://face2017.peatix.com"
-                    target="_blank"
-                    size="big"
-                    style={{ margin: '1em' }}
-                  >
-                    <Button.Content visible>Register Now</Button.Content>
-                    <Button.Content hidden>
-                      <Icon name="id card outline" />
-                    </Button.Content>
-                  </Button>
-                  <Button
-                    animated
-                    color="blue"
+                    color="facebook"
                     inverted
                     href="https://www.facebook.com/facehack.tech"
                     target="_blank"
                     size="big"
                     style={{ margin: '1em' }}
                   >
-                    <Button.Content visible>Facebook Page</Button.Content>
+                    <Button.Content visible>Like us on facebook</Button.Content>
                     <Button.Content hidden>
                       <Icon name="facebook" />
                     </Button.Content>
