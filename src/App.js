@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 import Header from './components/Header'
 import About from './components/About'
 import Venue from './components/Venue'
-// import Sponsor from './components/Sponsor'
+import Sponsor from './components/Sponsor'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import Subscribe from './components/Subscribe'
@@ -38,6 +38,9 @@ class App extends Component {
         </Element>
         <Element name="venue" className="element">
           <Venue />
+        </Element>
+        <Element name="faq" className="element">
+          <Sponsor />
         </Element>
         <Element name="faq" className="element">
           <FAQ />
