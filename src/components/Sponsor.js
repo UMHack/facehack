@@ -5,6 +5,7 @@ import glueck from '../image/glueck-logo-min.png'
 import nettium from '../image/logo-min.png'
 import silterra from '../image/silterra_tagline-min.png'
 import vitrox from '../image/ViTrox_Logo-min.png'
+import strateq from '../image/strateq-logo-min.png'
 
 export default class Sponsor extends React.Component {
   render() {
@@ -12,7 +13,7 @@ export default class Sponsor extends React.Component {
       <Segment basic padded>
         <Container text textAlign="justified">
           <Grid verticalAlign="middle" style={{ margin: '3em 0 0 0' }}>
-            <Grid.Row columns={2}>
+            <Grid.Row columns={3}>
               <Grid.Column>
                 <Image
                   src={entrypass}
@@ -29,8 +30,6 @@ export default class Sponsor extends React.Component {
                   centered
                 />
               </Grid.Column>
-            </Grid.Row>
-            <Grid.Row columns={3}>
               <Grid.Column>
                 <Image
                   src={glueck}
@@ -39,6 +38,8 @@ export default class Sponsor extends React.Component {
                   centered
                 />
               </Grid.Column>
+            </Grid.Row>
+            <Grid.Row columns={3}>
               <Grid.Column>
                 <Image
                   src={silterra}
@@ -51,7 +52,15 @@ export default class Sponsor extends React.Component {
                 <Image
                   src={nettium}
                   size="medium"
-                  alt="Logo of nettium"
+                  alt="Logo of Nettium"
+                  centered
+                />
+              </Grid.Column>
+              <Grid.Column>
+                <Image
+                  src={strateq}
+                  size="medium"
+                  alt="Logo of Strateq"
                   centered
                 />
               </Grid.Column>
