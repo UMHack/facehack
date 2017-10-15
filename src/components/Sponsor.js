@@ -11,7 +11,7 @@ export default class Sponsor extends React.Component {
   render() {
     return (
       <Segment basic padded>
-        <Container text textAlign="justified">
+        <Container textAlign="justified">
           <Grid verticalAlign="middle" style={{ margin: '3em 0 0 0' }}>
             <Grid.Row columns={3}>
               <Grid.Column>
